@@ -1,0 +1,127 @@
+[
+  {
+    "code": "E1",
+    "title": "Historical Freight Network Analysis",
+    "runtime": 0.138,
+    "metrics": {
+      "total_nodes": 20,
+      "total_edges": 380,
+      "network_density": 1.0,
+      "mode_hhi": 7795.97,
+      "commodity_hhi": 1454.71,
+      "top_hub_by_throughput": "Phoenix AZ",
+      "top_hub_throughput_k_tons": 293834.23
+    }
+  },
+  {
+    "code": "E2",
+    "title": "Historical Baseline vs Optimized Allocation",
+    "runtime": 2.518,
+    "metrics": {
+      "observed_baseline_cost": 35053332.97,
+      "optimized_objective_cost": 34005509.65,
+      "cost_savings_amount": 1047823.32,
+      "cost_savings_percent": 2.99,
+      "freight_tons_allocated": 2874428.2,
+      "num_decision_vars": 3911
+    }
+  },
+  {
+    "code": "E3",
+    "title": "Transportation Initializations vs MODI",
+    "runtime": 0.037,
+    "metrics": {
+      "nwcm_initial_cost": 70951.711,
+      "lcm_initial_cost": 20241.0864,
+      "vam_initial_cost": 20294.4669,
+      "modi_optimal_cost": 20011.5219,
+      "vam_modi_gap": 282.94,
+      "nwcm_modi_gap": 50940.19
+    }
+  },
+  {
+    "code": "E4",
+    "title": "Corridor Capacity Reduction (10%, 25%, 50%)",
+    "runtime": 9.301,
+    "metrics": {
+      "retention_90pct_service_ratio": 100.0,
+      "retention_90pct_cost_increase_pct": -6.69,
+      "retention_75pct_service_ratio": 100.0,
+      "retention_75pct_cost_increase_pct": -6.69,
+      "retention_50pct_service_ratio": 100.0,
+      "retention_50pct_cost_increase_pct": -6.69
+    }
+  },
+  {
+    "code": "E5",
+    "title": "Complete Corridor Closure",
+    "runtime": 3.365,
+    "metrics": {
+      "severed_corridor": "Phoenix AZ -> Phoenix AZ",
+      "resilience_service_ratio": 90.15,
+      "unmet_demand_tons": 283265.48,
+      "cost_increase_amount": 279834066.72,
+      "cost_increase_percent": 822.91
+    }
+  },
+  {
+    "code": "E6",
+    "title": "Transportation Mode Disruption (Rail)",
+    "runtime": 3.604,
+    "metrics": {
+      "disrupted_mode": "Rail (Mode 2)",
+      "resilience_service_ratio": 98.48,
+      "unmet_demand_tons": 43825.8,
+      "cost_increase_amount": 41631366.33,
+      "cost_increase_percent": 122.43,
+      "truck_substitution_tons": 2626802.2
+    }
+  },
+  {
+    "code": "E7",
+    "title": "Capacity Expansion & Shadow-Price Analysis",
+    "runtime": 1.697,
+    "metrics": {
+      "total_system_cost_with_expansion": 27646831.67,
+      "transport_operating_cost": 25936782.85,
+      "capital_expansion_expenditure": 1710048.83,
+      "number_of_expanded_corridors": 386,
+      "top_recommended_expansion": "Phoenix AZ -> Los Angeles CA"
+    }
+  },
+  {
+    "code": "E8",
+    "title": "Cost Sensitivity (+/-10%, +/-20%)",
+    "runtime": 13.83,
+    "metrics": {
+      "cost_minus_20pct_delta": -20.0,
+      "cost_minus_10pct_delta": -10.0,
+      "cost_plus_10pct_delta": 10.0,
+      "cost_plus_20pct_delta": 20.0
+    }
+  },
+  {
+    "code": "E9",
+    "title": "Demand Sensitivity (+/-10%, +/-20%)",
+    "runtime": 10.1,
+    "metrics": {
+      "demand_minus_20pct_cost_change": -20.0,
+      "demand_minus_10pct_cost_change": -10.0,
+      "demand_plus_10pct_cost_change": 10.0,
+      "demand_plus_20pct_cost_change": 20.0
+    }
+  },
+  {
+    "code": "E10",
+    "title": "Combined Multi-Disruption Scenario",
+    "runtime": 1.068,
+    "metrics": {
+      "scenario": "Multi-corridor closure (top 2) + Waterway outage + 20% fuel surge + 10% demand surge",
+      "resilience_service_ratio": 89.15,
+      "freight_served_tons": 2818958.99,
+      "unmet_demand_tons": 342912.04,
+      "cost_increase_percent": 1009.25,
+      "total_system_cost": 377204819.57
+    }
+  }
+]
